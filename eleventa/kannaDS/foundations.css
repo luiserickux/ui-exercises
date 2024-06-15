@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* DECLARACIÓN DE VARIABLES GENERALES */
+
+  /* COLORES EN LIGHT */
+  [data-theme="light"] {
+    --theme-surface: hsl(0 0 100%);
+    --theme-surface-container-low: hsl(225 42% 98%);
+    --theme-surface-container-high: hsl(228 36% 95%);
+    --theme-outline-low: hsl(228 34% 92%);
+    --theme-outline-high: hsl(228 33% 90%);
+    --theme-cuaternary: hsl(228 18% 45%);
+    --theme-tertiary: hsl(228 18% 38%);
+    --theme-secondary: hsl(228 22% 30%);
+    --theme-primary: hsl(228 24% 22%);
+    --theme-main-low: hsl(228 28% 18%);
+    --theme-main-high: hsl(228 30% 13%);
+
+    --glass-surface-low: hsl(0 0 100% / 0.7);
+    --glass-surface-high: hsl(0 0 100% / 0.8);
+    --glass-surface-container-low-low: hsl(225 42% 98% / 0.7);
+    --glass-surface-container-low-high: hsl(225 42% 98% / 0.8);
+    --glass-surface-container-high-low: hsl(228 36% 95% / 0.7);
+    --glass-surface-container-high-high: hsl(228 36% 95% / 0.8);
+
+    --primary-50: hsl(217 78% 95%);
+    --primary-100: hsl(218 81% 90%);
+    --primary-200: hsl(218 81% 79%);
+    --primary-300: hsl(218 81% 69%);
+    --primary-400: hsl(218 81% 58%);
+    --primary-500: hsl(218 88% 48%);
+    --primary-600: hsl(218 88% 38%);
+    --primary-700: hsl(218 88% 29%);
+    --primary-800: hsl(218 88% 19%);
+    --primary-900: hsl(218 88% 10%);
+    --primary-950: hsl(220 84% 5%);
+
+    --secondary-50: hsl(254 91% 95%);
+    --secondary-100: hsl(256 87% 91%);
+    --secondary-200: hsl(256 87% 82%);
+    --secondary-300: hsl(256 89% 72%);
+    --secondary-400: hsl(256 88% 63%);
+    --secondary-500: hsl(256 88% 54%);
+    --secondary-600: hsl(256 75% 43%);
+    --secondary-700: hsl(256 76% 32%);
+    --secondary-800: hsl(256 75% 22%);
+    --secondary-900: hsl(256 75% 11%);
+    --secondary-950: hsl(257 78% 5%);
+
+    --green-50: hsl(152 37% 92%);
+    --green-100: hsl(151 36% 86%);
+    --green-200: hsl(151 36% 73%);
+    --green-300: hsl(152 36% 59%);
+    --green-400: hsl(152 42% 46%);
+    --green-500: hsl(152 76% 32%);
+    --green-600: hsl(152 76% 26%);
+    --green-700: hsl(152 76% 19%);
+    --green-800: hsl(151 76% 13%);
+    --green-900: hsl(151 76% 6%);
+    --green-950: hsl(155 75% 3%);
+
+    --red-50: hsl(351 77% 95%);
+    --red-100: hsl(353 80% 90%);
+    --red-200: hsl(352 80% 80%);
+    --red-300: hsl(352 80% 71%);
+    --red-400: hsl(352 80% 61%);
+    --red-500: hsl(352 80% 51%);
+    --red-600: hsl(352 77% 41%);
+    --red-700: hsl(352 77% 31%);
+    --red-800: hsl(352 77% 20%);
+    --red-900: hsl(352 77% 10%);
+    --red-950: hsl(351 77% 5%);
+  }
+
+  /* COLORES EN DARK */
+  [data-theme="dark"] {
+    --theme-surface: hsl(217 24% 9%);
+    --theme-surface-container-low: hsl(214 19% 13%);
+    --theme-surface-container-high: hsl(214 15% 16%);
+    --theme-outline-low: hsl(213 16% 21%);
+    --theme-outline-high: hsl(213 16% 24%);
+    --theme-cuaternary: hsl(219 14% 56%);
+    --theme-tertiary: hsl(221 16% 64%);
+    --theme-secondary: hsl(219 20% 74%);
+    --theme-primary: hsl(218 24% 82%);
+    --theme-main-low: hsl(218 26% 89%);
+    --theme-main-high: hsl(222 32% 94%);
+
+    --glass-surface-low: hsl(213 24% 9% / 0.8);
+    --glass-surface-high: hsl(213 24% 9% / 0.9);
+    --glass-surface-container-low-low: hsl(217 19% 13% / 0.8);
+    --glass-surface-container-low-high: hsl(217 19% 13% / 0.9);
+    --glass-surface-container-high-low: hsl(215 15% 16% / 0.8);
+    --glass-surface-container-high-high: hsl(215 15% 16% / 0.9);
+
+    --primary-50: hsl(218 52% 12%);
+    --primary-100: hsl(218 51% 22%);
+    --primary-200: hsl(218 51% 32%);
+    --primary-300: hsl(218 52% 42%);
+    --primary-400: hsl(218 56% 52%);
+    --primary-500: hsl(218 84% 62%);
+    --primary-600: hsl(218 84% 68%);
+    --primary-700: hsl(218 83% 74%);
+    --primary-800: hsl(218 84% 80%);
+    --primary-900: hsl(218 83% 86%);
+    --primary-950: hsl(218 85% 92%);
+
+    --secondary-50: hsl(252 44% 20%);
+    --secondary-100: hsl(252 43% 30%);
+    --secondary-200: hsl(252 42% 39%);
+    --secondary-300: hsl(252 41% 49%);
+    --secondary-400: hsl(252 57% 59%);
+    --secondary-500: hsl(252 82% 68%);
+    --secondary-600: hsl(252 87% 73%);
+    --secondary-700: hsl(252 88% 77%);
+    --secondary-800: hsl(252 89% 81%);
+    --secondary-900: hsl(252 92% 86%);
+    --secondary-950: hsl(252 92% 90%);
+
+    --green-50: hsl(152 80% 10%);
+    --green-100: hsl(152 80% 17%);
+    --green-200: hsl(152 80% 23%);
+    --green-300: hsl(152 81% 29%);
+    --green-400: hsl(152 81% 34%);
+    --green-500: hsl(152 80% 40%);
+    --green-600: hsl(152 57% 48%);
+    --green-700: hsl(152 54% 57%);
+    --green-800: hsl(152 54% 65%);
+    --green-900: hsl(152 54% 74%);
+    --green-950: hsl(152 54% 82%);
+
+    --red-50: hsl(354 43% 16%);
+    --red-100: hsl(355 42% 26%);
+    --red-200: hsl(354 42% 35%);
+    --red-300: hsl(354 43% 43%);
+    --red-400: hsl(354 45% 52%);
+    --red-500: hsl(354 64% 60%);
+    --red-600: hsl(354 64% 65%);
+    --red-700: hsl(354 63% 71%);
+    --red-800: hsl(354 64% 77%);
+    --red-900: hsl(355 64% 83%);
+    --red-950: hsl(354 64% 88%);
+  }
+
+  /* ----------------------------------------------------------- */
+
+  /* PRIMITIVOS DE TIPOGRAFÍA */
+  --size-mini01: 0.625rem;
+  --size-small01: 0.75rem;
+  --size-small02: 0.875rem;
+  --size-small03: 1rem;
+  --size-small04: 1.125rem;
+  --size-medium01: 1.5rem;
+  --size-medium02: 1.75rem;
+  --size-medium03: 2rem;
+  --size-big01: 2.25rem;
+  --size-big02: 2.5rem;
+  --size-big03: 2.75rem;
+  --size-big04: 3rem;
+  --size-biggest01: 3.5rem;
+  --size-biggest02: 3.75rem;
+
+  --weight-regular: 25rem;
+  --weight-semibold: 37.5rem;
+  --weight-bold: 43.75rem;
+
+  --letter-spacing-25: -0.015625rem;
+  --letter-spacing-50: -0.03125rem;
+  --letter-spacing-75: -0.046875rem;
+  --letter-spacing-100: -0.0625rem;
+  --letter-spacing-150: -0.09375rem;
+  --letter-spacing-200: -0.125rem;
+
+  /* ESCALADOS DE TIPOGRAFÍA */
+  [data-theme="desktop"] {
+    --size-body-mini: var(--size-mini01);
+    --size-body-smallest: var(--size-small01);
+    --size-body-small: var(--size-small02);
+    --size-body-normal: var(--size-small03);
+    --size-body-large: var(--size-small04);
+    --size-display-headline-smallest: var(--size-medium01);
+    --size-display-headline-small: var(--size-medium03);
+    --size-display-headline-medium: var(--size-big02);
+    --size-display-headline-large: var(--size-big04);
+    --size-display-display-small: var(--size-biggest01);
+    --size-display-display-large: var(--size-biggest02);
+  }
+  [data-theme="mobile"] {
+    --size-body-mini: var(--size-mini01);
+    --size-body-smallest: var(--size-small01);
+    --size-body-small: var(--size-small02);
+    --size-body-normal: var(--size-small03);
+    --size-body-large: var(--size-small04);
+    --size-display-headline-smallest: var(--size-medium01);
+    --size-display-headline-small: var(--size-medium02);
+    --size-display-headline-medium: var(--size-medium03);
+    --size-display-headline-large: var(--size-big01);
+    --size-display-display-small: var(--size-big03);
+    --size-display-display-large: var(--size-big04);
+  }
+
+  /* ----------------------------------------------------------- */
+
+  /* ESPACIADOS GENERALES */
+  --spacing-tiny01: 0.25rem;
+  --spacing-tiny02: 0.5rem;
+  --spacing-tiny03: 0.75rem;
+  --spacing-tiny04: 1rem;
+  --spacing-medium01: 1.25rem;
+  --spacing-medium02: 1.5rem;
+  --spacing-medium03: 1.75rem;
+  --spacing-medium04: 2rem;
+  --spacing-big01: 2.5rem;
+  --spacing-big02: 3rem;
+  --spacing-big03: 3.5rem;
+  --spacing-big04: 4rem;
+  --spacing-biggest01: 4.5rem;
+  --spacing-biggest02: 5rem;
+
+  /* STROKE O BORDER WEIGHT */
+  --stroke-weight-low: 0.03125rem;
+  --stroke-weight-normal: 0.0625rem;
+  --stroke-weight-high: 0.09375rem;
+  --stroke-weight-x-high: 0.125rem;
+
+  /* RADII O BORDER RADIUS */
+  --radii-mini: 0.25rem;
+  --radii-x-low: 0.5rem;
+  --radii-low: 0.75rem;
+  --radii-normal: 1rem;
+  --radii-high: 1.25rem;
+  --radii-x-high: 1.5rem;
+  --radii-full: 62.4375rem;
+
+  /* BACKDROP BLUR */
+  --surface-blur-normal: 1rem;
+  --surface-blur-high: 1.5rem;
+  --surface-blur-x-high: 2rem;
+}
